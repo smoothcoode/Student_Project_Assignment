@@ -1,0 +1,64 @@
+<div>
+    <nav class="sm:px-16 px-6 bg-gray-800 shadow-md flex flex-wrap items-center sm:py-0 py-2">
+      <div class="flex-1 flex justify-between items-center">
+        <a href="/" class="flex text-lg font-semibold">
+          <img
+            src="https://avatars.githubusercontent.com/u/183861407?v=4"
+            width="50"
+            height="50"
+            class="p-2 rounded-2xl"
+          />
+          <div class="mt-3 text-white">Smooth Code</div>
+        </a>
+      </div>
+      
+      <button
+        id="menu-toggle"
+        class="cursor-pointer sm:hidden block"
+        onclick="document.getElementById('menu').classList.toggle('hidden')"
+      >
+      <svg
+      class="fill-current text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+    >
+      <title>menu</title>
+      <!-- First line -->
+      <rect x="0" y="3" width="20" height="2"></rect>
+      <!-- Second line -->
+      <rect x="0" y="9" width="20" height="2"></rect>
+      <!-- Third line -->
+      <rect x="0" y="15" width="20" height="2"></rect>
+    </svg>
+    
+      </button>
+  
+      <div
+        id="menu"
+        class="hidden sm:flex sm:items-center sm:w-auto w-full lg:mr-28"
+      >
+        <nav>
+          <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 sm:text-lg sm:flex sm:pt-0">
+            <li class="py-2 sm:py-0">
+              <a class="text-white hover:pb-1 hover:border-b-4" href="/">
+                Students
+              </a>
+            </li>
+            <li class="py-2 sm:py-0">
+                <a class="text-white hover:pb-1 hover:border-b-4" href="/projects">
+                  Projects
+                </a>
+              </li>
+              <li class="py-2 sm:py-0">
+                <a class="text-white hover:pb-1 hover:border-b-4" href="/assignment">
+                  Assignment 
+                </a> 
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <hr class="border-gray-700 border-1 mb-2" />
+  </div>

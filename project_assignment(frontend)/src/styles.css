@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        @apply bg-gray-900 text-white font-sans  text-3xl  sm:text-xl md:text-2xl lg:text-3xl 
+    }
+    table{
+        @apply table-auto border border-collapse w-screen text-left
+    }
+    th,td{
+        @apply border
+    }
+    .interactivehover{
+        @apply hover:bg-gray-700 cursor-pointer text-center
+    } 
+    input{
+        @apply block  mt-1 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 text-black
+    }
+    button{ 
+        @apply bg-purple-500 hover:bg-purple-600 mt-4 px-4 py-2 font-bold rounded
+    }
+    label{
+        @apply block font-medium text-gray-700
+    }
+    select{
+        @apply block mt-2 p-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 placeholder-gray-400 text-sm    }
+}

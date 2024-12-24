@@ -1,0 +1,29 @@
+<h2 class="mb-4">
+    Project List 
+</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+            <td> {{project.id}}</td>
+            <td> {{project.name}}</td>
+            <td class="interactivehover" (click)="deleteProject(project.id)">
+                <i class="fa fa-trash"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<form (ngSubmit)="addProject()" class="space-x-4">
+    <label for="ProjectCreation" class="inline-block">Add Project</label>
+    <input type="text" name="name" [(ngModel)]="project.name" class="inline-block">
+    <button type="submit" class="inline-block"> Submit</button>
+</form>
+
+
+
+
