@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "b7a2def8-4505-4035-8090-9fc0002bc7e9",
+		"name": "Project_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21783211"
+	},
+	"item": [
+		{
+			"name": "Add_Project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Electrical Project\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/projects/",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_Projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/projects/",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Single_Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/projects/1",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/projects/3",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"projects",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Math Project\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/projects/1",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"hans\",\r\n    \"average\": 6.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/students/",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/students/",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Single_Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/students/3",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ggr\",\r\n    \"average\": 7\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/students/10",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/students/9",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_Project_To_Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "3",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/students/5/projects/4",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"5",
+						"projects",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove_Project_To_Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"arij\",\r\n    \"moyen\": 14.2\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/students/",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStudentAvailableProjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dev_URL}}/students/1/availableprojects",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"1",
+						"availableprojects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assignment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dev_URL}}/students/assignment",
+					"host": [
+						"{{Dev_URL}}"
+					],
+					"path": [
+						"students",
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:9090",
+			"type": "string"
+		},
+		{
+			"key": "Dev_URL",
+			"value": "http://localhost:9090"
+		}
+	]
+}

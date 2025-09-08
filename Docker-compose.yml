@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  # MySQL Database
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: projectassignment
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend(SpringBoot)/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    healthcheck:
+      test:
+        ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Application
+  spring-backend:
+    build:
+      context: ./backend(SpringBoot)
+      dockerfile: Dockerfile
+    container_name: spring-backend
+    ports:
+      - "9090:9090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/projectassignment?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Angular Frontend
+  angular-frontend:
+    build:
+      context: ./Frontend(Angular)
+      dockerfile: Dockerfile
+    container_name: angular-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - spring-backend
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+    driver: local
