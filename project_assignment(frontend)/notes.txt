@@ -1,0 +1,3 @@
+docker exec -it angular-frontend bash
+
+cp index.csr.html index.html

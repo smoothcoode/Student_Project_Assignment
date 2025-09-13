@@ -1,4 +1,5 @@
 # Student Project Allocation
+![Timetable Example](https://github.com/smoothcoode/Image/blob/main/Project%20Assignment.png?raw=true)
 
 ## Overview
 The **Student Project Allocation** platform is a web application developed using **Spring Boot** for the backend and **Angular** for the frontend. The system is designed to **automatically allocate projects to students** based on their preferences and academic performance (average score). This ensures a fair and efficient distribution of projects while prioritizing students with higher academic achievements.
