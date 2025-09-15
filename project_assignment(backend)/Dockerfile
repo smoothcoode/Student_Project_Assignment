@@ -1,5 +1,5 @@
 # Stage 1: Build stage - Download JDK and build the application
-FROM eclipse-temurin:17-jdk-jammy as builder
+FROM eclipse-temurin:17-jdk-jammy AS builder
 # Set working directory
 WORKDIR /app
 # Copy Maven wrapper and pom.xml first (for better caching)
