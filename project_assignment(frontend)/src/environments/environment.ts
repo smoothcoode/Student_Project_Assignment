@@ -1,4 +1,4 @@
 export const environment = {
-    BASE_HOST:"http://public-api-address/api",
+    BASE_HOST:"http://-api-address/api",
     PRODUCTION:true
 };

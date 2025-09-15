@@ -12,7 +12,7 @@ COPY src/ src/
 RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Runtime stage - Create optimized production image
-FROM eclipse-temurin:17-jre-jammy as runtime
+FROM eclipse-temurin:17-jre-jammy AS runtime
 # Install curl for health checks (optional)
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # Create non-root user for security
