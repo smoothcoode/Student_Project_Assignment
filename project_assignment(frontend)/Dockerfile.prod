@@ -5,7 +5,7 @@ WORKDIR /src
 COPY package*.json ./
 RUN npm ci
 COPY . ./
-RUN  npm run build -- --configuration=development --output-path=dist
+RUN  npm run build -- --configuration=production --output-path=dist
 
 # Stage 2: Serve with Nginx
 FROM nginx:stable AS final
