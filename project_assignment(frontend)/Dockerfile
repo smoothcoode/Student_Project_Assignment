@@ -5,11 +5,14 @@ WORKDIR /src
 COPY package*.json ./
 RUN npm ci
 COPY . ./
-RUN  npm run build -- --configuration=development --output-path=dist
+RUN npm run build -- --configuration=development --output-path=dist
 
 # Stage 2: Serve with Nginx
 FROM nginx:stable AS final
 EXPOSE 4200
+
+# Remove default nginx index.html before copying Angular dist
+RUN rm -f /usr/share/nginx/html/index.html
 
 # Copy built Angular app to nginx
 COPY --from=build /src/dist/browser /usr/share/nginx/html
@@ -17,7 +20,7 @@ COPY --from=build /src/dist/browser /usr/share/nginx/html
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Optional if you alowed Server side rendering
+# Optional if you allowed Server side rendering
 RUN if [ -f /usr/share/nginx/html/index.csr.html ]; then \
       cp /usr/share/nginx/html/index.csr.html /usr/share/nginx/html/index.html; \
     fi

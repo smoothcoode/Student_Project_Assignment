@@ -23,6 +23,6 @@ WORKDIR /app
 # Copy the built JAR from the builder stage
 COPY --from=builder /app/target/*.jar app.jar
 # Expose port
-EXPOSE 9191
+EXPOSE 9090
 # Run the application with optimized JVM settings
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]

@@ -18,9 +18,6 @@ services:
   # Spring Boot Application
 
   spring-backend:
-    build:
-      context: ./project_assignment(backend)
-      dockerfile: Dockerfile
     image: smoothcoode/pabackend
     container_name: spring-backend
     ports:
@@ -34,7 +31,7 @@ services:
 
 
   angular-frontend:
-    image: smoothcoode/pafrontend:production    #this one uses public Ip Host and created from Dockerfile.prod uses environment.ts BASE_HOST predifined Variable
+    image: smoothcoode/pafrontend:prod1  #this one uses public Ip Host and created from Dockerfile.prod uses environment.ts BASE_HOST predifined Variable
     container_name: angular-frontend
     ports:
       - "4200:4200"
