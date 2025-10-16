@@ -18,7 +18,7 @@ services:
   # Spring Boot Application
 
   spring-backend:
-    image: smoothcoode/pabackend
+    image: smoothcoode/pabackend #Change it to your username/image-name
     container_name: spring-backend
     ports:
       - "9090:9090"
@@ -31,7 +31,7 @@ services:
 
 
   angular-frontend:
-    image: smoothcoode/pafrontend:prod1  #this one uses public Ip Host and created from Dockerfile.prod uses environment.ts BASE_HOST predifined Variable
+    image: smoothcoode/pafrontend:prod1 #Change it to your username/image-name: this one uses public Ip Host and created from Dockerfile.prod uses environment.ts BASE_HOST predifined Variable
     container_name: angular-frontend
     ports:
       - "4200:4200"
