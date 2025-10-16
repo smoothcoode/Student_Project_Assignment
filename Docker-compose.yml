@@ -21,7 +21,7 @@ services:
     build:
       context: ./project_assignment(backend)
       dockerfile: Dockerfile
-    image: smoothcoode/pabackend
+    image: smoothcoode/pabackend   #Chnage it to your username/image-name 
     container_name: spring-backend
     ports:
       - "9090:9090"
@@ -37,7 +37,7 @@ services:
     build:
       context: ./project_assignment(frontend)
       dockerfile: Dockerfile
-    image: smoothcoode/pafrontend
+    image: smoothcoode/pafrontend  #Chnage it to your username/image-name
     container_name: angular-frontend
     ports:
       - "4200:4200"
